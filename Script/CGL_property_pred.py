@@ -74,7 +74,7 @@ for property in Properties_to_predict:
 
     print("R2:",metrics.r2_score(y_test,y_pred))
     print("Train R2:",metrics.r2_score(y_train,y_train_pred))
-    print("Val R2:",metrics.r2_score(y_val,y_val_pred))
+    print("Train R2:",metrics.r2_score(y_val,y_val_pred))
 
 
     r2 = round(r2_score(y_test, y_pred), 2)

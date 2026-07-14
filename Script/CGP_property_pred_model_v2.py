@@ -60,7 +60,7 @@ for property in Properties_to_predict:
     y=df_model[property]
 
     ####Validation Data ###########
-
+    properties.remove(property)
     df_CGL_val=df_CGL_val.drop(properties,axis=1)
 
 
@@ -71,8 +71,6 @@ for property in Properties_to_predict:
 
     x_train,x_test,y_train,y_test=model_selection.train_test_split(x,y,test_size=0.2,random_state=0)
    
-
- 
 
     encoder = OneHotEncoder(handle_unknown='ignore',sparse_output=False)
 
